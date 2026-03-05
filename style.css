@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+
+nav {
+    background: #111;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: gold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: gold;
+}
+
+
+.hero {
+    height: 90vh;
+    background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 50px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: gold;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.about {
+    padding: 60px;
+    text-align: center;
+}
+
+.rooms {
+    padding: 60px;
+    background: white;
+}
+
+.room-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.room {
+    width: 300px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.room:hover {
+    transform: translateY(-10px);
+}
+
+.room img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room h3, .room p {
+    padding: 15px;
+}
+
+.room button {
+    margin: 10px;
+    padding: 10px;
+    width: 90%;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.room button:hover {
+    background: gold;
+    color: black;
+}
+
+.contact {
+    padding: 60px;
+    text-align: center;
+}
+
+.contact input,
+.contact textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

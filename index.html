@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Nours Hotel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1>Grand Luxury</h1>
+    <ul>
+        <li><a href="#home">Hem</a></li>
+        <li><a href="#about">Om oss</a></li>
+        <li><a href="#rooms">Rum</a></li>
+        <li><a href="#gallery">Galleri</a></li>
+        <li><a href="#reviews">Recensioner</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Välkommen till Grand Luxury Hotel</h2>
+    <p>En upplevelse utöver det vanliga</p>
+    <button onclick="scrollToRooms()">Se våra rum</button>
+</section>
+
+<section class="about" id="about">
+    <h2>Om vårt hotell</h2>
+    <p>
+        Vi erbjuder moderna rum, spa, pool, restaurang och 24/7 service.
+    </p>
+
+    <div class="features">
+        <div> Pool</div>
+        <div> Restaurang</div>
+        <div> Spa</div>
+        <div> Gratis WiFi</div>
+    </div>
+</section>
+
+<section class="rooms" id="rooms">
+    <h2>Våra Rum</h2>
+
+    <div class="booking-dates">
+        <label>Incheckning:</label>
+        <input type="date">
+        <label>Utcheckning:</label>
+        <input type="date">
+    </div>
+
+    <div class="room-container">
+
+        <div class="room">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+            <h3>Standard Rum</h3>
+            <p>Bekvämt rum med WiFi och frukost.</p>
+            <p class="price">1200 kr / natt</p>
+            <button onclick="bookRoom('Standard Rum')">Boka</button>
+        </div>
+
+        <div class="room">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a">
+            <h3>Deluxe Rum</h3>
+            <p>Lyxigt rum med balkong och havsutsikt.</p>
+            <p class="price">1900 kr / natt</p>
+            <button onclick="bookRoom('Deluxe Rum')">Boka</button>
+        </div>
+
+        <div class="room">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
+            <h3>Sviten</h3>
+            <p>Exklusiv svit med jacuzzi.</p>
+            <p class="price">3500 kr / natt</p>
+            <button onclick="bookRoom('Sviten')">Boka</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="gallery" id="gallery">
+    <h2>Galleri</h2>
+    <div class="gallery-container">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+    </div>
+</section>
+
+<section class="reviews" id="reviews">
+    <h2>Vad våra gäster säger</h2>
+    <div class="review-container">
+        <div class="review">
+            
+            <p>"Fantastisk service och rena rum!"</p>
+        </div>
+        <div class="review">
+            
+            <p>"Bästa hotellet jag bott på."</p>
+        </div>
+        <div class="review">
+            
+            <p>"Jättefin utsikt och god mat."</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Kontakta oss</h2>
+    <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Ditt namn" required><br>
+        <input type="email" placeholder="Din email" required><br>
+        <textarea placeholder="Ditt meddelande" required></textarea><br>
+        <button type="submit">Skicka</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Grand Nours Hotel</p>
+    <p>📍 Stockholm | 📞 070-123 45 67</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
