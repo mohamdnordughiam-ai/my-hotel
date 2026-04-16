@@ -12,3 +12,4 @@ function scrollToRooms() {
         behavior: "smooth"
     });
 }
+

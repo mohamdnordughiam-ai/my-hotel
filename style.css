@@ -26,16 +26,28 @@ nav h1 {
 nav ul {
     list-style: none;
     display: flex;
-}
+    position: relative;
+    position: fixed;
+    left: 300px;
+    background-color: rgb(0, 0, 0);
+    height: 50px;
+border-radius: 15px;} 
 
 nav ul li {
     margin-left: 20px;
+    align-content: center;
+    position: relative;
+    right: 10px;
+    
+    
+    
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
 }
+
 
 nav ul li a:hover {
     color: gold;
@@ -149,4 +161,15 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.gallery-container img {
+    width: 500px;
 }
