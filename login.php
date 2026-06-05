@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "SELECT name, password FROM Nours WHERE name = '$username' AND password = '$password'";
     $result = $conn->query($sql);
-    $data = $result->fetch_all(MYSQLI_ASSOC);
+    $data = $result->fetch_assoc();
     if($result->num_rows == 1) {
         $newName = $data["name"];
         $newPassword = $data["password"];
