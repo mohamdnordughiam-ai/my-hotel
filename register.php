@@ -1,7 +1,7 @@
 
 <?php
 
-$conn = new mysqli("localhost", "eliot" , "server" , "Nours");
+$conn = new mysqli("localhost", "mohamd" , "Ab_152**Eb" , "Nours");
 
 if ($_SERVER["REQUEST_METHOD"] == "post") {
     // om det är en POST request
