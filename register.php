@@ -3,9 +3,9 @@
 
 $conn = new mysqli("localhost", "mohamd" , "Ab_152**Eb" , "Nours");
 
-if ($_SERVER["REQUEST_METHOD"] == "post") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // om det är en POST request
-    $username = $_POST ["username"];
+    $username = $_POST["username"];
     $password = $_POST["password"];
     $sql = "INSERT INTO Nours (name, password) VALUES ('$title', '$beskrivning')";
 
