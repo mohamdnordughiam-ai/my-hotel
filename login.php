@@ -11,7 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
     $data = $result->fetch_all(MYSQLI_ASSOC);
     if($result->num_rows == 1) {
-        echo "You are signed in!";
+        $newName = $data["name"];
+        $newPassword = $data["password"];
+        echo "You are signed in!" . "You signed in as $newName with the password $newPassword";
     }
 }
 
