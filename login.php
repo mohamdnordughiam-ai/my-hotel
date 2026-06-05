@@ -10,9 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT name, password FROM Nours WHERE name = '$username' AND password = '$password'";
     $result = $conn->query($sql);
     $data = $result->fetch_all(MYSQLI_ASSOC);
-    // if($result->num_rows() == 1) {
-    //     echo "You are signed in!";
-    // }
+    if($result->num_rows == 1) {
+        echo "You are signed in!";
+    }
 }
 
 ?>
