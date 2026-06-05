@@ -1,14 +1,18 @@
 <?php
+$conn = new mysqli("localhost", "mohamd" , "Ab_152**Eb" , "Nours");
+
 session_start();
 
-$username = $_POST["username"];
-$password = $_POST["password"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-$sql = "SELECT name, password FROM Nours WHERE name = '$username' AND password = '$password'";
-$result = $conn->query($sql);
-$data = $result->fetch_all(MYSQLI_ASSOC);
-if($data->num_rows() == 1) {
-    echo "You are signed in!";
+    $sql = "SELECT name, password FROM Nours WHERE name = '$username' AND password = '$password'";
+    $result = $conn->query($sql);
+    $data = $result->fetch_all(MYSQLI_ASSOC);
+    if($data->num_rows() == 1) {
+        echo "You are signed in!";
+    }
 }
 
 ?>
