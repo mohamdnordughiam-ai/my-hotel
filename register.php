@@ -1,3 +1,21 @@
+
+<?php
+
+$conn = new mysqli("localhost", "eliot" , "server" , "Nour");
+
+if ($_SERVER["REQUEST_METHOD"] == "post") {
+    // om det är en POST request
+    $username = $_POST ["username"];
+    $password = $_POST["password"];
+    $sql = "INSERT INTO Nours (name, password) VALUES ('$title', '$beskrivning')";
+
+    $conn->query($sql);
+
+
+}  
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
