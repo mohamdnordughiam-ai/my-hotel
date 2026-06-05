@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // om det är en POST request
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $sql = "INSERT INTO Nours (name, password) VALUES ('$title', '$beskrivning')";
+    $sql = "INSERT INTO Nours (name, password) VALUES ('$username', '$password')";
 
     $conn->query($sql);
 
