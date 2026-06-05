@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "post") {
     <title>Document</title>
 </head>
 <body>
-    <form action="test.php" method="post">
+    <form method="post">
         <label>username:</label>
         <input type="text" name="username">
         <label>password:</label>
