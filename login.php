@@ -1,36 +1,19 @@
 <?php
+session_start();
 
-$conn = new mysqli("localhost", "eliot" , "server" , "Nour");
+$username = $_POST["username"];
+$password = $_POST["password"];
 
-if ($_SERVER["REQUEST_METHOD"] == "post") {
-    // om det är en POST request
-    $username = $_POST ["username"];
-    $password = $_POST["password"];
-    $sql = "INSERT INTO formdata (name, password) VALUES ('$title', '$beskrivning')";
-
-    $conn->query($sql);
-
-
-}  
+$sql = "SELECT name, password FROM Nours WHERE name = '$username' AND password = '$password'";
+$result = $conn->query($sql);
+$data = $result->fetch_all(MYSQLI_ASSOC);
+if($data->num_rows() == 1) {
+    echo "You are signed in!";
+}
 
 ?>
 
-  
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form method="POST">
-    username: <input type="text" name="username" required><br><br>
-    password:<br>
-    <textarea name="password" rows="5" cols="40"></textarea><br><br>
-    <input type="submit" value="Skicka">
-
-    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
